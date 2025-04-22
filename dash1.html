@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת ניהול 1 - OptiPrice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(90deg, rgba(42, 82, 152, 0.9), rgba(30, 60, 114, 0.9));
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #00c6ff;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        tableau-viz {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(30, 60, 114, 0.9);
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .back-btn {
+                padding: 0.6rem 1rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>מערכת ניהול 1 - ויזואליזציה לתמחור הזמנות</h1>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>תיאור המערכת</h2>
+            <p>מערכת ניהול 1 של OptiPrice מספקת כלים ויזואליים מתקדמים לניתוח תמחור הזמנות בזמן אמת. המערכת מאפשרת למשתמשים לעקוב אחר מדדי ביצוע מרכזיים (KPIs), לזהות מגמות תמחור ולקבל החלטות מבוססות נתונים לשיפור הרווחיות.</p>
+        </section>
+
+        <section class="section" id="tableau">
+            <h2>ויזואליזציה של תמחור הזמנות 📊</h2>
+            <p>הגרף המוצג להלן מציג ניתוח מפורט של תמחור הזמנות לפי קטגוריות מוצרים, כולל השוואות רווחיות וזיהוי הזדמנויות אופטימיזציה. השתמשו במסננים האינטראקטיביים כדי להתמקד בנתונים רלוונטיים.</p>
+            <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+            <tableau-viz 
+                id="tableauViz"
+                src="https://public.tableau.com/views/Dash1_17453429752040/Dashboard1"
+                toolbar="bottom"
+                hide-tabs
+                width="100%"
+                height="800">
+            </tableau-viz>
+        </section>
+
+        <section class="section">
+            <a href="index.html" class="back-btn">חזרה למסך הבית</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 OptiPrice - כל הזכויות שמורות</p>
+    </footer>
+
+    <script>
+        // Button hover animation
+        const backButton = document.querySelector('.back-btn');
+        backButton.addEventListener('mouseover', () => {
+            backButton.style.background = 'linear-gradient(45deg, #0072ff, #00c6ff)';
+        });
+        backButton.addEventListener('mouseout', () => {
+            backButton.style.background = 'linear-gradient(45deg, #00c6ff, #0072ff)';
+        });
+    </script>
+</body>
+</html>
