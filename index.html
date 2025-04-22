@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>המערכת של OptiPrice - ויזואליזציה לקבלת החלטות בתמחור</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(90deg, rgba(30, 60, 114, 0.9), rgba(42, 82, 152, 0.9));
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .nav-btn {
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #00c6ff;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-right: 1.5rem;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '✓';
+            color: #00c6ff;
+            position: absolute;
+            right: -1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(30, 60, 114, 0.9);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-btn {
+                padding: 0.6rem 1rem;
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>המערכת של OptiPrice - ויזואליזציה לקבלת החלטות בתמחור</h1>
+        <nav>
+            <a href="dash1.html" class="nav-btn">מערכת ניהול 1</a>
+            <a href="dash2.html" class="nav-btn">מערכת ניהול 2</a>
+            <a href="dash3.html" class="nav-btn">מערכת ניהול 3</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>תכלית המערכת</h2>
+            <p>מערכת OptiPrice היא פתרון ויזואלי מתקדם שנועד לסייע לעסקים בקבלת החלטות מושכלות בתהליכי תמחור הזמנות. המערכת משלבת ניתוח נתונים בזמן אמת עם ממשק משתמש אינטואיטיבי, המאפשר למקבלי ההחלטות לראות את התמונה המלאה ולהגיב במהירות לשינויים בשוק.</p>
+        </section>
+
+        <section>
+            <h2>מטרות המערכת</h2>
+            <ul>
+                <li>שיפור דיוק התמחור על בסיס ניתוח נתונים דינמי</li>
+                <li>קיצור זמן קבלת ההחלטות באמצעות ויזואליזציה ברורה</li>
+                <li>הגדלת הרווחיות על ידי זיהוי הזדמנויות תמחור אופטימליות</li>
+                <li>שילוב עם מערכות קיימות לצורך זרימת מידע חלקה</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>יתרונות המערכת</h2>
+            <p>המערכת מאפשרת למשתמשים לנהל מספר רב של הזמנות במקביל, תוך שימוש בדשבורדים מותאמים אישית שמציגים מדדים קריטיים בזמן אמת. כל מערכת ניהול מציעה כלים ייחודיים המותאמים לצרכים שונים של העסק, החל מניהול תמחור בסיסי ועד לניתוח מתקדם של מגמות שוק.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 OptiPrice - כל הזכויות שמורות</p>
+    </footer>
+
+    <script>
+        // Add smooth scroll to anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Button hover animation
+        const buttons = document.querySelectorAll('.nav-btn');
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.background = 'linear-gradient(45deg, #0072ff, #00c6ff)';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.background = 'linear-gradient(45deg, #00c6ff, #0072ff)';
+            });
+        });
+    </script>
+</body>
+</html>
